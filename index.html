@@ -106,7 +106,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Java/" style="font-size: NaNpx;">Java</a><a href="/tags/test/" style="font-size: NaNpx;">test</a>
+						<a href="/tags/Java/" style="font-size: 20px;">Java</a><a href="/tags/test/" style="font-size: 10px;">test</a>
 					</div>
 				</section>
 				
@@ -171,6 +171,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-http-client-analysis" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/04/12/http-client-analysis/" class="article-date">
+  	<time datetime="2015-04-12T13:58:01.000Z" itemprop="datePublished">2015-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/12/http-client-analysis/">HttpClient 源码解析一</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HttpClient是一个Apache的开源库，用来模拟浏览器发送Http请求并获得服务器回复的过程。用户通过提供一个请求对象来让HttpClient执行，如果HttpClient执行成功则返回一个回复对象，否则就抛出异常。根据官方文档，其最简单的使用实例如下：<br><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CloseableHttpClient httpclient = HttpClients.createDefault();</span><br><span class="line">HttpGet httpget = <span class="keyword">new</span> HttpGet(<span class="string">"http://hc.apache.org"</span>);</span><br><span class="line">CloseableHttpResponse <span class="built_in">response</span> = httpclient.<span class="keyword">execute</span>(httpget);</span><br><span class="line">try &#123;</span><br><span class="line">	httpclient.<span class="keyword">execute</span>(httpget);</span><br><span class="line">&#125; finally &#123;</span><br><span class="line"><span class="built_in">response</span>.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>代码所示为请求一个HttpClient项目官网首页的过程。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
