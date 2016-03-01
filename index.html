@@ -217,7 +217,9 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一行的#!">第一行的#!</h2><p>在Shell执行第一个程序时，会要求Unix内核启动一个新的进程，以便在该进程内执行指定的程序。由于现有的UNIX系统有好几个Shell，因此，需要一种方式来告诉UNIX内核应该以哪个Shell来执行所指定的Shell脚本。这样做有助于执行机制的通用化，让用户得以直接饮用任何的程序解释器。方法是，通过<strong>脚本文件中特殊的第一行来设置：在第一行的开头使用 #! 这两个字符</strong>。</p>
+        <h2 id="第一行的#!">第一行的#!</h2><p>在Shell执行第一个程序时，会要求Unix内核启动一个新的进程，以便在该进程内执行指定的程序。由于现有的UNIX系统有好几个Shell，因此，需要一种方式来告诉UNIX内核应该以哪个Shell来执行所指定的Shell脚本。这样做有助于执行机制的通用化，让用户得以直接饮用任何的程序解释器。方法是，通过<strong>脚本文件中特殊的第一行来设置：在第一行的开头使用 #! 这两个字符</strong>。例如，假设有一个csh脚本，它的第一行为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/csh -f</span><br></pre></td></tr></table></figure></p>
+<p>就会引用/bin/csh，同样地，也可以独立地引用awk程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/awk -f</span><br></pre></td></tr></table></figure></p>
+<p>而Shell脚本通常一开始都是#! /bin/sh。</p>
 
       
     </div>
@@ -229,6 +231,10 @@ var _hmt = _hmt || [];
 	</div>
 
       
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/其他/">其他</a>
+	</div>
+
 
       
       <div class="clearfix"></div>
